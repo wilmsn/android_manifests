@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  
+  <remote fetch="https://github.com/aperomsik/" name="aaopt" />
+  <remote fetch="https://github.com/Grouper-AOSP/" name="Grouper-AOSP" />
+  <remote fetch="https://github.com/AndDiSa/" name="ads" />
+  <remote fetch="https://github.com/GtrCraft/" name="GtrCraft" />
+  <remote fetch="https://github.com/Team-OctOS/" name="Team-OctOS" />
+
+  <!--
+Remove repositories to save space on the output ROM,
+especially for grouper.  Even with these changes, opengapps-pico
+doesn't quite fit.
+  -->
+  
+ <remove-project name="CyanogenMod/android_packages_apps_Exchange" />
+ <remove-project name="CyanogenMod/android_packages_apps_CMUpdater" />
+
+ <project path="device/asus/grouper" name="aperomsik/cyanogenmod_android_device_asus_grouper" remote="github" revision="cm-14.1" groups="device,grouper" />
+ <project path="kernel/asus/grouper" name="AndDiSa/android_kernel_asus_grouper" remote="github" revision="ads-7.0.1" />
+
+ <remove-project name="CyanogenMod/android_external_libnfc-nxp" />
+ <project path="external/libnfc-nxp" name="aperomsik/android_external_libnfc-nxp" remote="github" revision="cm-14.1" groups="pdk" />   
+ <project path="vendor/asus" name="AndDiSa/proprietary_vendor_asus" remote="github" revision="ads-7.0.1" />
+ <project path="vendor/broadcom" name="AndDiSa/proprietary_vendor_broadcom" remote="github" revision="ads-7.0.1" />
+ <project path="vendor/elan" name="AndDiSa/proprietary_vendor_elan" remote="github" revision="oct-mm" />
+ <project path="vendor/invensense" name="AndDiSa/proprietary_vendor_invensense" remote="github" revision="ads-7.0.1" />
+ <project path="vendor/nvidia" name="AndDiSa/proprietary_vendor_nvidia" remote="github" revision="ads-7.0.1" />
+
+
+</manifest>
